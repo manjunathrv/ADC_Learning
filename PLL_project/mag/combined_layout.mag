@@ -1,0 +1,17 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1627919477
+<< locali >>
+rect 4134 848 5134 888
+rect 4135 804 4241 848
+rect 4026 698 4241 804
+use VCO  VCO_0
+timestamp 1607692587
+transform 1 0 5080 0 1 10
+box 0 0 1804 1280
+use CP  CP_0
+timestamp 1607692587
+transform 1 0 0 0 1 0
+box 0 0 4134 1280
+<< end >>

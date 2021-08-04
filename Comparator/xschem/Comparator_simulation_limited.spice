@@ -1,0 +1,60 @@
+Ihyst VCC net3 10u
+V1 VCC GND 3.3
+V2 INN GND 1.235
+V3 INP GND pwl 0 0.8 10u 1.8 20u 0.8 30u 1.8 40u 0.8 50u 1.8 60u 0.8 70u 1.8 80u 0.8 90u 1.8 100u
++ 0.8
+
+
+
+**.subckt Comparator_2
+XM3 net1 INN net2 GND sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=0.42 
+XM4 VDIFF INP net2 GND sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=0.42
+XM2 net2 VCC GND GND sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=0.42 
+XM1 net1 VOUT2 net5 GND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 
+XM5 VDIFF VOUT1 net5 GND sky130_fd_pr__nfet_g5v0d10v5 L=0.50 W=1
+XM6 net5 net3 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=0.42 
+XM7 net3 net3 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=0.6 W=0.42 
+XM8 net4 EN GND GND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 
+XM9 VOUT VOUT2 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 
+XM10 VOUT2 VOUT1 net4 GND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 
+XM13 VOUT1 VCC GND GND sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=0.42 
+XM18 VDIFF net1 VCC VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 
+XM11 net1 net1 VCC VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 
+XM12 VOUT1 VDIFF VCC VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=6 
+XM14 VOUT2 EN VCC VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 
+XM17 VOUT VOUT2 VCC VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 
+XM15 VOUT2 VOUT1 VCC VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 
+XM16 VDIFF VDIFF VCC VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5
+
+
+R1 VOUT GND 10M m=1
+V4 EN GND 3.3
+
+
+
+.include Libs/cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__tt.corner.spice
+.include Libs/cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__tt.corner.spice
+* Mismatch parameters
+.include Libs/cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice
+.include Libs/cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice
+*
+* All models
+.include Libs/models/all_mod.spice
+*
+
+
+.options savecurrents
+.control
+tran 10n 20u
+*plot PLUS MINUS VDIFF V2nd VOUT
+*plot net1 net2 net3
+plot INP EN INN VOUT
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+** flattened .save nodes
+.end
+        

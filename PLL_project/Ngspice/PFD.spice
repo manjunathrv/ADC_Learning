@@ -1,0 +1,70 @@
+* SPICE3 file created from PFD.ext - technology: sky130A
+
+.subckt PFD Clk_Ref Up Down Clk2 GND VDD
+X0 VDD a_140_824# a_1046_712# VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=720000u l=150000u
+X1 a_542_184# Clk2 a_428_172# GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.8e+06u l=150000u
+X2 Clk_Ref Clk_Ref a_140_824# VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=650000u l=150000u
+X3 VDD Clk2 a_542_184# VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=650000u l=150000u
+X4 GND a_140_824# a_1046_712# GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X5 Up a_1046_712# GND GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X6 a_428_172# Clk_Ref GND GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X7 VDD Clk_Ref a_140_712# VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=650000u l=150000u
+X8 Up a_1046_712# VDD VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=720000u l=150000u
+X9 VDD a_654_184# a_1096_142# VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=720000u l=150000u
+X10 Down a_1096_142# VDD VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=720000u l=150000u
+X11 a_140_598# Clk2 GND GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=440000u l=150000u
+X12 a_654_184# Clk2 a_542_184# GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=2.4e+06u l=150000u
+X13 Clk2 Clk2 a_654_184# VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=650000u l=150000u
+X14 a_140_712# Clk_Ref a_140_598# GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.8e+06u l=150000u
+X15 GND a_654_184# a_1096_142# GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X16 a_140_824# Clk_Ref a_140_712# GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=2.4e+06u l=150000u
+X17 Down a_1096_142# GND GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+C0 a_140_824# Clk2 0.01fF
+C1 VDD a_140_712# 0.15fF
+C2 a_1096_142# Down 0.16fF
+C3 a_542_184# a_140_824# 0.01fF
+C4 a_1046_712# VDD 0.19fF
+C5 Up a_1046_712# 0.15fF
+C6 a_654_184# VDD 0.13fF
+C7 Clk_Ref Clk2 0.17fF
+C8 Clk2 Down 0.02fF
+C9 a_542_184# Clk_Ref 0.01fF
+C10 Clk_Ref a_140_824# 0.19fF
+C11 a_1096_142# VDD 0.30fF
+C12 Up a_1096_142# 0.00fF
+C13 VDD Clk2 0.10fF
+C14 a_542_184# VDD 0.27fF
+C15 VDD a_140_824# 0.14fF
+C16 a_1046_712# a_654_184# 0.00fF
+C17 Up a_140_824# 0.01fF
+C18 a_1046_712# a_1096_142# 0.01fF
+C19 Clk2 a_140_712# 0.01fF
+C20 a_1096_142# a_654_184# 0.40fF
+C21 VDD Clk_Ref 0.20fF
+C22 a_542_184# a_140_712# 0.02fF
+C23 VDD Down 0.65fF
+C24 a_140_824# a_140_712# 0.63fF
+C25 Up Down 0.01fF
+C26 a_654_184# Clk2 0.27fF
+C27 a_1046_712# a_140_824# 0.36fF
+C28 a_654_184# a_542_184# 0.49fF
+C29 a_654_184# a_140_824# 0.03fF
+C30 Clk_Ref a_140_712# 0.09fF
+C31 a_1096_142# Clk2 0.06fF
+C32 Up VDD 0.16fF
+C33 a_1096_142# a_542_184# 0.02fF
+C34 a_1096_142# a_140_824# 0.00fF
+C35 a_1046_712# Clk_Ref 0.00fF
+C36 a_654_184# Clk_Ref 0.01fF
+C37 a_654_184# Down 0.01fF
+C38 a_542_184# Clk2 0.05fF
+C39 Up GND 0.16fF
+C40 VDD GND 3.18fF
+C41 a_1096_142# GND 0.81fF
+C42 a_654_184# GND 0.98fF
+C43 a_428_172# GND 0.17fF
+C44 a_542_184# GND 0.31fF
+C45 a_140_712# GND 0.22fF
+C46 a_1046_712# GND 0.56fF
+C47 a_140_824# GND 0.03fF
+.ends
